@@ -10,7 +10,7 @@ import com.kosea.kmove30.JDBC_Manager;
 
 public class WindowExample8_2 {
 
-	public static void main(String[] args) {
+	public WindowExample8_2() {
 		JDBC_Manager jdbc_Manager = new JDBC_Manager();
 
 		JFrame frame = new JFrame("참가자 명단 프로그램");
@@ -72,6 +72,10 @@ public class WindowExample8_2 {
 			e.printStackTrace();
 			frame.setTitle("참가자 명단 프로그램 -DB접속 실패");
 		}
+
+	}
+
+	public static void main(String[] args) {
 
 	}
 

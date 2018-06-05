@@ -25,7 +25,7 @@ public class MybatisTest {
 				// Member member=new Member();
 				Member member = session.selectOne("org.mybatis.example.SelectMapper.selectMember", 101);
 
-				System.out.println("회원 아이디: " + member.getId());
+				System.out.println("회원 아이디: " + member.getPassword());
 
 			} finally {
 				session.close();
