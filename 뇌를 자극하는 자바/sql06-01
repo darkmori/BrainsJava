@@ -1,0 +1,10 @@
+select * from member;
+
+create table member(
+	id varchar(50),
+	pass varchr(50),
+	primary key(id)
+);
+
+insert into member(id,pass)
+values ('kosea','12345');

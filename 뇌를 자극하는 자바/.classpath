@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="Person.java|PersonInfo.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/mail.jar"/>
+	<classpathentry kind="lib" path="D:/SwingSet3.jar"/>
+	<classpathentry kind="lib" path="D:/tools/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar"/>
+	<classpathentry kind="lib" path="C:/Users/r1-21/Downloads/mybatis-3.4.6/mybatis-3.4.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
