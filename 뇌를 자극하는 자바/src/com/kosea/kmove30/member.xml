@@ -13,11 +13,11 @@
 		delete from member where mno = #{mno}
 	</delete>
 
-	<update id="updateMember">
+	<update id="updateMember" parameterType="Member">
 		update member set id = #{id} , pass = #{pass} where mno = #{mno};
 	</update>
 	
-	<insert id="insertMember">
+	<insert id="insertMember" parameterType="Member">
 		insert into member(mno, id, pass) values(#{mno}, #{id}, #{pass})
 	</insert>
 </mapper>
