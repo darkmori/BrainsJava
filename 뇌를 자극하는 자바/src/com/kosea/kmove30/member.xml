@@ -9,4 +9,15 @@
 		select * from member where mno = #{mno}
 	</select>
 
+	<delete id="deleteMember" parameterType="int">
+		delete from member where mno = #{mno}
+	</delete>
+
+	<update id="updateMember">
+		
+	</update>
+	
+	<insert id="insertMember">
+		insert into member(mno, id, password) values(#{mno}, #{id}, #{password})
+	</insert>
 </mapper>
