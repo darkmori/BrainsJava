@@ -14,10 +14,10 @@
 	</delete>
 
 	<update id="updateMember">
-		
+		update member set id = #{id} , pass = #{pass} where mno = #{mno};
 	</update>
 	
 	<insert id="insertMember">
-		insert into member(mno, id, password) values(#{mno}, #{id}, #{password})
+		insert into member(mno, id, pass) values(#{mno}, #{id}, #{pass})
 	</insert>
 </mapper>

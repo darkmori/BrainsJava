@@ -3,17 +3,17 @@ package com.kosea.kmove30;
 public class Member {
 	int mno;
 	String id;
-	String password;
+	String pass;
 
 	public Member() {
 		// 기본생성자
 	}
 
-	public Member(int mno, String id, String password) {
+	public Member(int mno, String id, String pass) {
 		super();
 		this.mno = mno;
 		this.id = id;
-		this.password = password;
+		this.pass = pass;
 	}
 
 	public int getMno() {
@@ -32,11 +32,11 @@ public class Member {
 		this.id = id;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPass() {
+		return pass;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 }
