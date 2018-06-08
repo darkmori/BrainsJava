@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="270.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="-1.0" layoutY="14.0" prefHeight="410.0" prefWidth="351.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="30.0" layoutY="25.0" text="User ID" />
+            <Label layoutX="30.0" layoutY="55.0" text="Password" />
+            <Label layoutX="30.0" layoutY="85.0" text="Address" />
+            <Label layoutX="30.0" layoutY="115.0" text="BirthDay" />
+            <TextField layoutX="100.0" layoutY="20.0" />
+            <TextField layoutX="100.0" layoutY="50.0" />
+            <TextField layoutX="100.0" layoutY="80.0" />
+            <TextField layoutX="100.0" layoutY="110.0" text="생년월일" />
+            <Button layoutX="147.0" layoutY="152.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="취 소" />
+            <Button layoutX="30.0" layoutY="152.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="회원가입" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -4,14 +4,6 @@
 /ConditionalOrExample1.class
 /ConditionalOrExample2.class
 /ConstrExample2.class
-/chap06/
-/chap08/
-/chap09/
-/chap11/
-/chap19/
-/com/
-/geometry/
-/math/
 /FirstJava.class
 /FiveNumbers.class
 /JBDC_Delete.class
@@ -27,3 +19,12 @@
 /SubscriberInfo.class
 /Test_args.class
 /Variable.class
+/chap06/
+/chap08/
+/chap09/
+/chap11/
+/chap19/
+/com/
+/geometry/
+/math/
+/log4j.properties
