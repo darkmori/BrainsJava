@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>게시판 글쓰기 - 입력화면</title>
+</head>
+<body>
+	<h2>글쓰기</h2>
+	<!-- method타입은 post로 날리면 파타미터의 값이 보이지않는다 -->
+	
+	<form action="BBSPost.jsp" method="post">
+	이름 :	<input type="text" name="NAME"/>
+	</br> 
+	제목 :	<input type="text" name="TITLE"/>
+	</br>
+	<textarea cols="50"  rows="5" name="CONTENT"></textarea>
+	<input type="SUBMIT" value="저장"/>
+	<input type="reset" value="취소"/>
+	</form>
+</body>
+</html>

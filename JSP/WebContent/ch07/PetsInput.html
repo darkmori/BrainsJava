@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2018. 7. 23.</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+	<script src="js/bootstrap.min.js"></script>
+	<form action="/JSP/ch07/PetsResult.jsp">
+		아이디 :<input type="text" name="Id"> <br/><br/>
+		다음 중 회원님이 키우고 있는 애완동물을 선택하십시오.<br/><br/>
+		개<input type="checkbox" name="Animal" value="개">
+		고양이<input type="checkbox" name="Animal" value="고양이"> 
+		금붕어<input type="checkbox" name="Animal" value="금붕어"> <br/><br/>
+		
+		<input type="submit" value="확인">
+		<input type="reset" value="취소">
+		
+	</form>
+	
+</body>
+</html>

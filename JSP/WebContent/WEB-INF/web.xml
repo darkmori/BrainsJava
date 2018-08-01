@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>JSP</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<description>DB 네임 초기화 파라미터</description>
+		<param-name>DB_NAME</param-name>
+		<param-value>malldb</param-value>
+	</context-param>
+
+	<context-param>
+		<description>DB Test값</description>
+		<param-name>DB_Test</param-name>
+		<param-value>TestDB</param-value>
+	</context-param>
+
+
+
+	<error-page>
+		<exception-type>java.lang.NumberFormatException</exception-type>
+		<location>/WEB-INF/error/NumberFormatError.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.ArithmeticException</exception-type>
+		<location>/WEB-INF/error/ArithmeticException.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/WEB-INF/error/NullPointerException.jsp</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/WEB-INF/error/NullPointerException.jsp</location>
+	</error-page>
+
+
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/error/NotFoundError.jsp</location>
+	</error-page>
+
+
+
+
+	<servlet>
+		<servlet-name>hundred-servlet</servlet-name>
+		<servlet-class>HundredServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hundred-servlet</servlet-name>
+		<url-pattern>/hundred</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>adder-servlet</servlet-name>
+		<servlet-class>AdderSetvlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adder-servlet</servlet-name>
+		<url-pattern>/adder</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>bbs-post-servlet</servlet-name>
+		<servlet-class>BBSPostServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>bbs-post-servlet</servlet-name>
+		<url-pattern>/bbs-post</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>pinfo-result-servlet</servlet-name>
+		<servlet-class>PersonalInfoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>pinfo-result-servlet</servlet-name>
+		<url-pattern>/pinfo-result</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>pibonachi-servlet</servlet-name>
+		<servlet-class>PibonachiServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>pibonachi-servlet</servlet-name>
+		<url-pattern>/pibonachi</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>PersonalTestServlet-servlet</servlet-name>
+		<servlet-class>PersonalTestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PersonalTestServlet-servlet</servlet-name>
+		<url-pattern>/ptest</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>WinnersServlet-servlet</servlet-name>
+		<servlet-class>WinnersServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WinnersServlet-servlet</servlet-name>
+		<url-pattern>/random</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>animal-servlet</servlet-name>
+		<servlet-class>AnimalServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>animal-servlet</servlet-name>
+		<url-pattern>/animal</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>result-servlet</servlet-name>
+		<servlet-class>ResultServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>result-servlet</servlet-name>
+		<url-pattern>/result</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>divider-servlet</servlet-name>
+		<servlet-class>DividerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>divider-servlet</servlet-name>
+		<url-pattern>/divider</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>dividerTest-servlet</servlet-name>
+		<servlet-class>ch05.DividerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dividerTest-servlet</servlet-name>
+		<url-pattern>/dividerTest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>greeting-servlet</servlet-name>
+		<servlet-class>ch06.GreetingServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>greeting-servlet</servlet-name>
+		<url-pattern>/greeting</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PersonTestView-servlet</servlet-name>
+		<servlet-class>Example.PersonTestView</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PersonTestView-servlet</servlet-name>
+		<url-pattern>/personTestView</url-pattern>
+	</servlet-mapping>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://localhost:8080/JSP/ch07/math-functions.tld</taglib-uri>
+			<taglib-location>/WEB-INF/math-functions.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
+	<servlet>
+		<servlet-name>pinfo-servelet</servlet-name>
+		<servlet-class>ch08.PersonalInfoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>pinfo-servelet</servlet-name>
+		<url-pattern>/pinfo</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>
