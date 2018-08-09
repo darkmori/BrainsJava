@@ -32,58 +32,59 @@ int absolutepage=1;  // 절대 위치 페이지 번호
 int dbcount=0 ;   //  DB 안에 글 갯수 저장 변수
 %>
 <%
-try{ 
+	try{ 
 	DBConnectionManager pool = DBConnectionManager.getInstance();
-	Connection con = pool.getConnection("ora8");
+		Connection con = pool.getConnection("ora8");
 
-	String  b_name, b_email, b_title, b_content, b_date, mailto;
-	int  b_id =0 , b_hit = 0, level=0, color=1 ;
+		String b_name, b_email, b_title, b_content, b_date, mailto;
+		int b_id = 0, b_hit = 0, level = 0, color = 1;
 
-	// DB 행의 수 계산
-	Statement stmt = con.createStatement();  
-	ResultSet pageset = stmt.executeQuery("select count(b_id) from re_board");
-	if( pageset.next()){
-		dbcount = pageset.getInt(1); 
-		pageset.close();
-	}
-
-    int ii = dbcount + 1;
-
-	if(dbcount%pagesize == 0)   
-		pagecount = dbcount/(pagesize); // 총 페이지수 구하기
-	else
-		pagecount = dbcount/(pagesize)+1; // 총 페이지수 구하기
-
-	if(request.getParameter("pageNUM") != null) {
-		pageNUM=Integer.parseInt(request.getParameter("pageNUM"));	 //지정된 페이지 보여주기
-		absolutepage=(pageNUM-1)*pagesize+1;
-		ii = ii - (pageNUM-1)*pagesize;
-	}
-
-	String sql = "select b_id, b_name, b_email, b_title, b_content, ";
-	sql = sql + " to_char(b_date,'yy-mm-dd'), b_hit, ref, step, anslevel "; 
-	sql = sql + " from re_board order by ref desc, step ";
-	sql = sql.toUpperCase().trim();
-	ResultSet rs = stmt.executeQuery(sql);
-
-	for(int k=1; k<absolutepage; k++)rs.next();
-	int k=1;
-
-	while(rs.next() && k<=pagesize){ 
-		b_id=rs.getInt(1);			//글번호
-		b_name=rs.getString(2);		// 글쓴이
-		b_email=rs.getString(3);	//작성자 메일
-		b_title=rs.getString(4);	// 글제목
-		b_content=rs.getString(5);	//글내용
-		b_date=rs.getString(6);		//작성날짜
-		b_hit=rs.getInt(7);			// 조회수
-		level=rs.getInt(10);		//글 레벨
-		if(!b_email.equals("")) {
-		mailto="<a href=mailto:"+b_email+">"+b_name+"</a>";
-		} else {
-			mailto=b_name; 
+		// DB 행의 수 계산
+		Statement stmt = con.createStatement();
+		ResultSet pageset = stmt.executeQuery("select count(b_id) from re_board");
+		if (pageset.next()) {
+			dbcount = pageset.getInt(1);
+			pageset.close();
 		}
-        ii--;
+
+		int ii = dbcount + 1;
+
+		if (dbcount % pagesize == 0)
+			pagecount = dbcount / (pagesize); // 총 페이지수 구하기
+		else
+			pagecount = dbcount / (pagesize) + 1; // 총 페이지수 구하기
+
+		if (request.getParameter("pageNUM") != null) {
+			pageNUM = Integer.parseInt(request.getParameter("pageNUM")); //지정된 페이지 보여주기
+			absolutepage = (pageNUM - 1) * pagesize + 1;
+			ii = ii - (pageNUM - 1) * pagesize;
+		}
+
+		String sql = "select b_id, b_name, b_email, b_title, b_content, ";
+		sql = sql + " to_char(b_date,'yy-mm-dd'), b_hit, ref, step, anslevel ";
+		sql = sql + " from re_board order by ref desc, step ";
+		sql = sql.toUpperCase().trim();
+		ResultSet rs = stmt.executeQuery(sql);
+
+		for (int k = 1; k < absolutepage; k++)
+			rs.next();
+		int k = 1;
+
+		while (rs.next() && k <= pagesize) {
+			b_id = rs.getInt(1); //글번호
+			b_name = rs.getString(2); // 글쓴이
+			b_email = rs.getString(3); //작성자 메일
+			b_title = rs.getString(4); // 글제목
+			b_content = rs.getString(5); //글내용
+			b_date = rs.getString(6); //작성날짜
+			b_hit = rs.getInt(7); // 조회수
+			level = rs.getInt(10); //글 레벨
+			if (!b_email.equals("")) {
+				mailto = "<a href=mailto:" + b_email + ">" + b_name + "</a>";
+			} else {
+				mailto = b_name;
+			}
+			ii--;
 %>
 	<tr height=22 bgcolor=ffffff onMouseOver=this.style.backgroundColor='#FFF8DE'  onMouseOut=this.style.backgroundColor='#FFFFFF'>
 		<td width=50 align=center><%= ii %></td>
